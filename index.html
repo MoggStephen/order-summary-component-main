@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="./index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+</head>
+<body>
+  <main class="orderSummaryContainer">
+    <img class="orderSummaryContainerItem img" src="./images/illustration-hero.svg" alt="Person having fun listening to music!">
+    
+    <!-- contentContainer -->
+    <div class="orderSummaryContainerItem contentContainer">
+      <h1 class="contentContainerItem orderSummaryHeader">Order Summary</h1>
+      <p class="contentContainerItem orderSummaryParagraph">
+        You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+      </p>
+
+      <!-- planContainer -->
+      <div class="contentContainerItem planContainer">
+        <img src="./images/icon-music.svg" alt="Music note" class="planContainerItem icon">
+
+        <!-- annualContainer -->
+        <div class="planContainerItem annualContainer">
+          <h1 class="annualContainerItem annualContainerHeader">Annual Plan</h1>
+          <p class="annualContainerItem annualContainerParagraph">$59.99/year</p>
+        </div>
+
+        <div class="planContainerItem change">Change</div>
+      </div>
+
+      <!-- buttons -->
+      <button class="contentContainerItem proceedButton">Proceed to Payment</button>
+      <button class="contentContainerItem cancelButton">Cancel Order</button>
+    </div>
+  </main>
+</body>
+</html>

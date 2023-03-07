@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Red Hat Display");
+:root{
+    /* Colors from designs */
+    --external-background-color: hsl(224, 100%, 92%);
+    --main-background-color: hsl(0, 0%, 100%);
+    --plan-container-background-color: hsl(230, 75%, 98%);
+    --summary-header-color: hsl(221, 38%, 25%);
+    --summary-paragraph-color: hsl(222, 12%, 62%);
+    --change-color: hsl(245, 55%, 48%);
+    --proceed-button-background-color: hsl(245, 75%, 52%);
+    --cancel-button-color: hsl(224, 13%, 55%);
+
+    /* ACTIVE STATES */
+    --change-active-color: hsl(245, 83%, 68%);
+    --proceed-button-active-color: hsl(245, 83%, 68%);
+    --cancel-button-active-color: hsl(228, 45%, 15%);
+
+    /* Primary Colours */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral Colours */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    
+    /* Font stuff */
+    --font-size-header: 1.5rem;
+    --font-size-paragraph: 1rem;
+    --font-family: "Red Hat Display", sans-serif;
+    --weight-small: 500;
+    --weight-medium: 700;
+    --weight-big: 900;
+    
+    --border-radius-summary-container: 1.5rem;
+}
+*{
+    /* BOILERPLATE STYLES */
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    text-align: center;
+}
+html, body, .orderSummaryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: var(--pale-blue);
+}
+.orderSummaryContainer{
+    width: auto;
+    height: auto;
+    
+    margin: 1.375rem;
+    border-radius: var(--border-radius-summary-container) var(--border-radius-summary-container) var(--border-radius-summary-container) var(--border-radius-summary-container);
+    background: white;
+}
+/* contentContainer */
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.img{
+    border-radius: var(--border-radius-summary-container) var(--border-radius-summary-container) 0 0;
+    width: 100%;
+}
+.orderSummaryHeader{
+    font-size: var(--font-size-header);
+    font-weight: var(--weight-big);
+    color: var(--summary-header-color);
+
+    margin: 2rem 0 1.375rem 0;
+}   
+.orderSummaryParagraph{
+    color: var(--desaturated-blue);
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--weight-small);
+
+    margin: 0 0.5rem 1.5rem 0.5rem;
+}
+/* planContainer */
+.planContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    background: var(--plan-container-background-color);
+    border-radius: var(--border-radius-summary-container);
+    padding: 0.5rem;
+    width: 100%;
+}
+.planContainerItem{
+    margin: 0.5rem;
+}
+/* annualContainer */
+.annualContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.annualContainerHeader{
+    font-size: 1rem;
+}
+.annualContainerParagraph{
+    color: var(--cancel-button-color);
+    font-size: 0.875rem;
+}
+.change{
+    margin-left: auto;
+    text-decoration: underline;
+    color: var(--change-color);
+    font-size: 0.875rem;
+    font-weight: var(--weight-medium);
+}
+.change:hover{
+    color: var(--change-active-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+/* BUTTONS */
+.proceedButton{
+    width: 100%;
+    border-radius: 1rem;
+    color: white;
+    background: var(--proceed-button-background-color);
+    border: 0;
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: var(--weight-medium);
+    margin: 1.375rem 0 0 0;
+    box-shadow: 0.125rem 0.5rem 0.5rem hsl(231, 24%, 89%);
+}
+.proceedButton:hover{
+    background: var(--proceed-button-active-color);
+    cursor: pointer;
+}
+.cancelButton{
+    margin: 1.25rem 0 0.675rem 0;
+    background: white;
+    color: var(--cancel-button-color);
+    border: 0;
+    font-size: 1rem;
+    font-weight: var(--weight-big)
+}
+.cancelButton:hover{
+    color: var(--cancel-button-active-color);
+    cursor: pointer;
+}
+/*  RESPONSIVE:
+    Desktop designs width = 406px. Mine reaches 406px at screen width of 450px 
+    So limit it there!
+*/
+@media (min-width: 450px) {
+    .orderSummaryContainer{
+        max-width: 406px;
+    }
+}
