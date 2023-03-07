@@ -158,8 +158,8 @@ html, body, .orderSummaryContainer{
     cursor: pointer;
 }
 /*  RESPONSIVE:
-    Desktop designs width = 406px. Mine reaches 406px at screen width of 450px 
-    So limit it there!
+    Desktop designs width of component = 406px. Mine reaches 406px at screen width of 450px 
+    So limit the width of the component when the screen gets to 450px
 */
 @media (min-width: 450px) {
     .orderSummaryContainer{
